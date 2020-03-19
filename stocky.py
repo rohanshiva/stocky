@@ -27,20 +27,20 @@ ticker = st.text_input('Enter the stock symbol')
 
 date = st.text_input('Enter data in YYYY-MM-DD format')
 budget = st.text_input("How much money did you plan on investing? (just enter the number)")
-b = float(budget)
 today = arrow.now().format('YYYY-MM-DD')
 profit = 0.0
 if st.button('Stocky'):
+    budget = float(budget)
     with st.spinner('chill... i am calculating'):
         try:
-            profit = stocky(key, ticker, date, b, today)
-            if((profit)<b):
+            profit = stocky(key, ticker, date, budget, today)
+            if((profit)<budget):
                 st.write(profit)
                 st.balloons()
-                st.success("good shit, if you invested you would have lost $" + str(b-profit))
+                st.success("good shit, if you invested you would have lost $" + str(budget-profit))
             else:
                 st.write(profit)
-                st.error("rip, you could have made, $"  + str(profit-b) + ", you lost money retard")
+                st.error("rip, you could have made, $"  + str(profit-budget) + ", you lost money")
         except:
             st.warning("invalid date or stock symbol!! try again") 
 
