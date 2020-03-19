@@ -12,7 +12,6 @@ backcall==0.1.0
 base58==1.0.3
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
-bleach==3.1.0
 blinker==1.4
 blis==0.4.1
 boto3==1.10.2
@@ -142,7 +141,6 @@ unittest2==1.1.0
 urllib3==1.25.6
 validators==0.14.0
 wasabi==0.6.0
-watchdog==0.9.0
 wcwidth==0.1.8
 webencodings==0.5.1
 whichcraft==0.6.1
